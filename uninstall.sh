@@ -15,6 +15,7 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "elementary-xfce-darker"
 cd arc-icon-theme
 sudo make uninstall
 sudo rm -rf /usr/share/icons/Arc
+rm -rf ./arc-icon-theme
 
 # revert greeter theme and icons
 > /ect/lightdm/lightdm-gtk-greeter.conf
