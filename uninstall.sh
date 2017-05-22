@@ -5,7 +5,7 @@ sed -i '14s/.*/        <value type="string" value="xfwm4"\/>/' ~/.config/xfce4/x
 dconf write /org/gnome/metacity/theme "'Ambiance'"
 
 # remove compiz and settings manager
-sudo apt remove compiz compizconfig-settings-manager
+sudo apt remove -y compiz compizconfig-settings-manager
 
 # revert theme and icons
 xfconf-query -c xsettings -p /Net/ThemeName -s "Greybird"
@@ -21,14 +21,14 @@ sudo rm -rf /usr/share/icons/Arc
 sudo sh -c 'echo "[greeter]\ntheme-name = Greybird\nicon-theme-name = elementary-xfce-darkest" > /etc/lightdm/lightdm-gtk-greeter.conf'
 
 # remove arc theme and moka icons
-sudo apt-get remove arc-theme
-sudo apt-get remove moka-icon-theme
+sudo apt-get -y remove arc-theme
+sudo apt-get -y remove moka-icon-theme
 
-sudo apt-get remove dh-autoreconf
-sudo apt-get remove dconf-cli
+sudo apt-get -y remove dh-autoreconf
+sudo apt-get -y remove dconf-cli
 
 # remove other unused dependancies
-sudo apt-get autoremove
+sudo apt-get -y autoremove
 
 # remove repositories
 sudo add-apt-repository --remove ppa:moka/daily
