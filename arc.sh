@@ -35,7 +35,7 @@ sudo apt-get -y install metacity
 sudo apt-get -y install light-themes
 
 # install compiz
-sudo apt-get -y install compiz compizconfig-settings-manager
+sudo apt-get -y install compiz compiz-plugins compizconfig-settings-manager
 
 # change default metacity theme
 sudo apt-get -y install dconf-cli
