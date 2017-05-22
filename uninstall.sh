@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # revert xfce startup session
-sed -i '12s/.*/        <value type="string" value="xfwm4"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+sed -i '14s/.*/        <value type="string" value="xfwm4"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 dconf write /org/gnome/metacity/theme "'Ambiance'"
 
 # remove compiz and settings manager
@@ -9,7 +9,7 @@ sudo apt remove compiz compizconfig-settings-manager
 
 # revert theme and icons
 xfconf-query -c xsettings -p /Net/ThemeName -s "Greybird"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "elementary-xfce-darkest"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "elementary-xfce-darker"
 
 # remove icons
 cd arc-icon-theme
