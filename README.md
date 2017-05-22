@@ -2,7 +2,7 @@
 
 ![preview](https://github.com/zachanator070/xfce-arc-compiz/blob/master/Screenshot_2017-05-19_21-29-06.png "Screenshot")
 
-I figured after taking all the effort to make my desktop look nice, perhaps others would want to do the same without the hastle 
+I figured after taking all the effort to make my desktop look nice, perhaps others would want to do the same without the hastle
 that I went through to figure out all the dependancies and tricks to get things working together.
 
 ## Components
@@ -25,7 +25,7 @@ Run CompizConfig Settings Manager (```ccsm```) and be sure to enable these plugi
 * Compiz Library Toolbox
 * Regex Matching
 
-NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml to 
+NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml to
 ```
 <value type="string" value="xfwm4"/>
 ```
@@ -35,3 +35,4 @@ NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config
 ./uninstall.sh
 ```
 NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files are those found in this git repository.
+The default GTK themes Metacity and light-themes are left so that xfce settings can be rolled back to them.
