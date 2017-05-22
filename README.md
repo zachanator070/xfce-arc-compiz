@@ -23,11 +23,13 @@ Run CompizConfig Settings Manager (```ccsm```) and be sure to enable these plugi
 * Regex Matching
 
 NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml to 
-```<value type="string" value="xfwm4"/>```
+```
+<value type="string" value="xfwm4"/>
+```
 
 ## Uninstall
-'''
+```
 ./uninstall.sh
-'''
+```
 NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files
 are those found in this git repository.
