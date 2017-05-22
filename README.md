@@ -5,6 +5,10 @@
 I figured after taking all the effort to make my desktop look nice, perhaps others would want to do the same without the hastle
 that I went through to figure out all the dependancies and tricks to get things working together.
 
+### USE AT YOUR OWN RISK
+
+I am not responsible for messing up your desktop environment. Make a snapshot or back up ~/.config/xfce4 before running. You should know what a command does before running it. That rule includes all the commands in these scripts and these are commented to at lease give you an idea of what is happening.
+
 ## Components
 * [Arc GTK 3 Theme](https://github.com/horst3180/arc-theme.git)
 * [Arc GTK 3 Icons](https://github.com/horst3180/arc-icon-theme.git)
