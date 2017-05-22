@@ -29,6 +29,14 @@ Run CompizConfig Settings Manager (`ccsm`) and be sure to enable these plugins:
 * Compiz Library Toolbox
 * Regex Matching
 
+These plugins aren't required to run, but are nice to have:
+* Move Window
+* Grid
+* Place Windows
+* Resize Window
+* Scale
+* Snapping Windows
+
 NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml to
 `<value type="string" value="xfwm4"/>`
 
