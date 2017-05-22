@@ -40,6 +40,7 @@ sudo apt-get -y install compiz compiz-plugins compizconfig-settings-manager
 # change default metacity theme
 sudo apt-get -y install dconf-cli
 dconf write /org/gnome/metacity/theme "'Arc-Dark'"
+dconf write /org/gnome/desktop/wm/preferences/button-layout "':minimize,maximize,close'"
 cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 # update xfce session to run compiz on start up
 sed -i '12s/.*/        <value type="string" value="compiz"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
