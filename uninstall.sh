@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # revert xfce startup session
-sed -i '12s/.*/        <value type="string" value="xfwm4"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 dconf write /org/gnome/metacity/theme "'Ambiance'"
 
 # remove compiz and settings manager
