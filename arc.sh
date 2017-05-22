@@ -22,12 +22,13 @@ git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-t
 # install arc icons dependancy
 sudo apt-get install dh-autoreconf
 # install arc icons
+./autogen.sh
 sudo make install
 sudo gtk-update-icon-cache /usr/local/share/icons/Arc/
 
 # set current theme to Arc
 xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Dark"
-xfconf-query -c xsettings -p /Net/IconThemeName -x "Arc"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Arc"
 
 # install compiz dependancies
 sudo apt-get -y install metacity
