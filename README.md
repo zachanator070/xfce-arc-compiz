@@ -46,5 +46,8 @@ Reboot after selecting desired plugins and changes
 ```
 ./uninstall.sh
 ```
+
+Reboot after script finishes
+
 NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files are those found in this git repository.
 The default GTK themes Metacity and light-themes are left so that xfce settings can be rolled back to valid defaults.
