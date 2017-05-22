@@ -20,7 +20,7 @@ sudo echo "[greeter]\ntheme-name = Arc-Dark\nicon-theme-name = Moka" > /ect/ligh
 # get the arc icons
 git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-theme
 # install arc icons dependancy
-sudo apt install dh-autoreconf
+sudo apt-get install dh-autoreconf
 # install arc icons
 sudo make install
 sudo gtk-update-icon-cache /usr/local/share/icons/Arc/
@@ -32,14 +32,13 @@ sed -i '6s/.*/    <property name="IconThemeName" type="string" value="Arc"\/>' ~
 
 # install compiz dependancies
 sudo apt-get install metacity
-sudo apt install light-themes
+sudo apt-get install light-themes
 
 # install compiz
-sudo apt install compiz compizconfig-settings-manager
+sudo apt-get install compiz compizconfig-settings-manager
 
 # change default metacity theme
-sudo apt install dconf-editor
-sudo apt install dconf-cli
+sudo apt-get install dconf-cli
 dconf write /org/gnome/metacity/theme "'Arc-Dark'"
 cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 # update xfce session to run compiz on start up

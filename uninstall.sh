@@ -24,3 +24,13 @@ sudo echo "[greeter]\ntheme-name = Ambiance\nicon-theme-name = elementary-xfce" 
 # remove arc theme and moka icons
 sudo apt-get remove arc-theme
 sudo apt-get remove moka-icon-theme
+
+sudo apt-get remove dh-autoreconf
+sudo apt-get remove dconf-cli
+
+# remove other unused dependancies
+sudo apt-get autoremove
+
+# remove repositories
+sudo add-apt-repository --remove ppa:moka/daily
+sudo rm /etc/apt/sources.list.d/arc-theme.list
