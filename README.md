@@ -21,7 +21,7 @@ I am not responsible for messing up your desktop environment. Make a snapshot or
 ```
 ./arc.sh
 ```
-Run CompizConfig Settings Manager (```ccsm```) and be sure to enable these plugins:
+Run CompizConfig Settings Manager (`ccsm`) and be sure to enable these plugins:
 * Commands
 * Composite
 * OpenGL
@@ -30,13 +30,13 @@ Run CompizConfig Settings Manager (```ccsm```) and be sure to enable these plugi
 * Regex Matching
 
 NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml to
-```
-<value type="string" value="xfwm4"/>
-```
+`<value type="string" value="xfwm4"/>`
+
+Reboot after selecting desired plugins and changes
 
 ## Uninstall
 ```
 ./uninstall.sh
 ```
 NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files are those found in this git repository.
-The default GTK themes Metacity and light-themes are left so that xfce settings can be rolled back to them.
+The default GTK themes Metacity and light-themes are left so that xfce settings can be rolled back to valid defaults.
