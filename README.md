@@ -1,4 +1,7 @@
 # xfce-arc-compiz
+
+![preview](https://github.com/zachanator070/xfce-arc-compiz/blob/master/Screenshot_2017-05-19_21-29-06.png "Screenshot")
+
 I figured after taking all the effort to make my desktop look nice, perhaps others would want to do the same without the hastle 
 that I went through to figure out all the dependancies and tricks to get things working together.
 
@@ -31,5 +34,4 @@ NOTE: If you want the themes but do not want compiz, change line 12 of ~/.config
 ```
 ./uninstall.sh
 ```
-NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files
-are those found in this git repository.
+NOTE: This removes all components installed on your machine and reverts dconf attributes to defaults. The only remaining files are those found in this git repository.
