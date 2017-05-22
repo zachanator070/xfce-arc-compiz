@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # add the arc repository
 wget -nv http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key -O Release.key
@@ -43,4 +44,3 @@ dconf write /org/gnome/metacity/theme "'Arc-Dark'"
 cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 # update xfce session to run compiz on start up
 sed -i '12s/.*/        <value type="string" value="compiz"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-
