@@ -11,35 +11,36 @@ sudo add-apt-repository ppa:moka/daily
 sudo apt-get update
 
 # install moka and arc
-sudo apt-get install moka-icon-theme
-sudo apt-get install arc-theme
+sudo apt-get -y install moka-icon-theme
+sudo apt-get -y install arc-theme
 
 # set greeter to new theme and icons
-sudo echo "[greeter]\ntheme-name = Arc-Dark\nicon-theme-name = Moka" > /ect/lightdm/lightdm-gtk-greeter.conf
+sudo sh -c 'echo "[greeter]\ntheme-name = Arc-Dark\nicon-theme-name = Moka" > /etc/lightdm/lightdm-gtk-greeter.conf'
 
 # get the arc icons
 git clone https://github.com/horst3180/arc-icon-theme --depth 1 && cd arc-icon-theme
 # install arc icons dependancy
 sudo apt-get install dh-autoreconf
 # install arc icons
+./autogen.sh
 sudo make install
 sudo gtk-update-icon-cache /usr/local/share/icons/Arc/
 
 # set current theme to Arc
-sed -i '40s/.*/    <property name="theme" type="string" value="Arc-Dark"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
-sed -i '5s/.*/    <property name="ThemeName" type="string" value="Arc-Dark"\/>' ~/.config/xfce4/xconf/xfce-perchannel-xml/xsettings.xml
-sed -i '6s/.*/    <property name="IconThemeName" type="string" value="Arc"\/>' ~/.config/xfce4/xconf/xfce-perchannel-xml/xsettings.xml
+xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Dark"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Arc"
 
 # install compiz dependancies
-sudo apt-get install metacity
-sudo apt-get install light-themes
+sudo apt-get -y install metacity
+sudo apt-get -y install light-themes
 
 # install compiz
-sudo apt-get install compiz compizconfig-settings-manager
+sudo apt-get -y install compiz compiz-plugins compizconfig-settings-manager
 
 # change default metacity theme
-sudo apt-get install dconf-cli
+sudo apt-get -y install dconf-cli
 dconf write /org/gnome/metacity/theme "'Arc-Dark'"
+dconf write /org/gnome/desktop/wm/preferences/button-layout "':minimize,maximize,close'"
 cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 # update xfce session to run compiz on start up
 sed -i '12s/.*/        <value type="string" value="compiz"\/>/' ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
