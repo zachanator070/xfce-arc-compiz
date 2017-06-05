@@ -12,7 +12,7 @@ sudo apt-get update
 
 # install moka and arc
 sudo apt-get -y install moka-icon-theme
-sudo apt-get -y install arc-theme
+sudo apt-get -y --allow-unauthenticated install arc-theme
 
 # set greeter to new theme and icons
 sudo sh -c 'echo "[greeter]\ntheme-name = Arc-Dark\nicon-theme-name = Moka" > /etc/lightdm/lightdm-gtk-greeter.conf'
